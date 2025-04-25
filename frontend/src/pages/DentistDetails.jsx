@@ -24,7 +24,7 @@ const DentistDetails = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/users/profile/${dentistId}`,
+          `https://dental-care-app.onrender.com/api/users/profile/${dentistId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

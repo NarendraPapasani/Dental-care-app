@@ -18,7 +18,7 @@ const DentistList = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/users/role/doctor",
+          "https://dental-care-app.onrender.com/api/users/role/doctor",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -50,7 +50,7 @@ const AppointmentForm = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/users/profile/${dentistId}`,
+          `https://dental-care-app.onrender.com/api/users/profile/${dentistId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -85,11 +85,14 @@ const AppointmentForm = () => {
 
       try {
         // Fetch the current user information to verify role
-        const response = await axios.get("http://localhost:3000/api/users/me", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://dental-care-app.onrender.com/api/users/me",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (response.data.success) {
           setCurrentUser(response.data.data);
@@ -120,7 +123,7 @@ const AppointmentForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/appointments",
+        "https://dental-care-app.onrender.com/api/appointments",
         {
           dentistId,
           appointmentDate,

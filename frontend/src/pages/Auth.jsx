@@ -24,7 +24,7 @@ const Auth = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://dental-care-app.onrender.com/api/auth/login",
         { email, password }
       );
 
@@ -69,7 +69,7 @@ const Auth = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/signup",
+        "https://dental-care-app.onrender.com/api/auth/signup",
         {
           username,
           email,

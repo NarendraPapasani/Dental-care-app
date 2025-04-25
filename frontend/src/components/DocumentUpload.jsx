@@ -65,7 +65,7 @@ const DocumentUpload = ({ patientId, appointmentId, onUploadSuccess }) => {
       }
 
       const response = await axios.post(
-        "http://localhost:3000/api/documents/upload",
+        "https://dental-care-app.onrender.com/api/documents/upload",
         formData,
         {
           headers: {

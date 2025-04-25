@@ -7,9 +7,19 @@ const app = express();
 // Connect to the database
 connectDB();
 
+const corsOptions = {
+  origin: [
+    "https://dental-care-app.onrender.com", // Replace with your actual Render frontend URL
+    "http://localhost:3000", // Keep local development URL
+    "http://localhost:5173", // Common Vite development URL
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  credentials: true,
+};
+
 // Middleware
 app.use(express.json()); // Parse JSON bodies
-app.use(cors()); // Enable CORS
+app.use(cors(corsOptions)); // Enable CORS with options
 
 // Serve static files from the uploads directory
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));

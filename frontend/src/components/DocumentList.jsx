@@ -22,7 +22,7 @@ const DocumentList = ({ appointmentId, isPatient = false }) => {
       const token = localStorage.getItem("token");
 
       try {
-        let url = "http://localhost:3000/api/documents/";
+        let url = "https://dental-care-app.onrender.com/api/documents/";
 
         if (appointmentId) {
           url += `appointment/${appointmentId}`;
@@ -58,7 +58,7 @@ const DocumentList = ({ appointmentId, isPatient = false }) => {
 
       try {
         const response = await axios.delete(
-          `http://localhost:3000/api/documents/${documentId}`,
+          `https://dental-care-app.onrender.com/api/documents/${documentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ const DocumentList = ({ appointmentId, isPatient = false }) => {
     try {
       // Use axios to fetch the file as a blob
       const response = await axios.get(
-        `http://localhost:3000/api/documents/download/${documentId}`,
+        `https://dental-care-app.onrender.com/api/documents/download/${documentId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -269,7 +269,7 @@ const DocumentList = ({ appointmentId, isPatient = false }) => {
             </div>
             <div className="p-4 flex justify-center">
               <img
-                src={`http://localhost:3000${activePreview.fileUrl}`}
+                src={`https://dental-care-app.onrender.com${activePreview.fileUrl}`}
                 alt={activePreview.name}
                 className="max-h-[80vh] max-w-full object-contain"
               />

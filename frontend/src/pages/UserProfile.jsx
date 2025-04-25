@@ -48,7 +48,7 @@ const UserProfile = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/users/profile/${parsedUser.id}`,
+          `https://dental-care-app.onrender.com/api/users/profile/${parsedUser.id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -105,7 +105,7 @@ const UserProfile = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/users/profile/${user.id}`,
+        `https://dental-care-app.onrender.com/api/users/profile/${user.id}`,
         formData,
         {
           headers: {

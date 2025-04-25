@@ -55,7 +55,7 @@ const AppointmentDetails = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/appointments/${appointmentId}`,
+          `https://dental-care-app.onrender.com/api/appointments/${appointmentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -92,7 +92,7 @@ const AppointmentDetails = () => {
 
     try {
       const response = await axios.patch(
-        `http://localhost:3000/api/appointments/${appointmentId}/status`,
+        `https://dental-care-app.onrender.com/api/appointments/${appointmentId}/status`,
         { status: newStatus },
         {
           headers: {
