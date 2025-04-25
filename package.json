@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "multer": "^1.4.5-lts.2"
+  }
+}
