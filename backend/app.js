@@ -9,6 +9,7 @@ connectDB();
 
 const corsOptions = {
   origin: [
+    "https://bright-brigadeiros-3d3e91.netlify.app",
     "https://dental-care-app.onrender.com", // Replace with your actual Render frontend URL
     "http://localhost:3000", // Keep local development URL
     "http://localhost:5173", // Common Vite development URL
